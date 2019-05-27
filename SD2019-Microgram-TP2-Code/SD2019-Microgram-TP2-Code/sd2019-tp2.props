@@ -1,15 +1,38 @@
-mediastorage-rest-service-mainclass=microgram.impl.rest.media.MediaRestServer
+mediastorage-rest-service-mainclass=microgram.impl.srv.rest.media.MediaRestServer
 mediastorage-rest-service-port=12222
 
+posts-rest-service-mainclass=microgram.impl.srv.rest.posts.PostsRestServer
+posts-rest-service-port=17777
+
+profiles-rest-service-mainclass=microgram.impl.srv.rest.profiles.ProfilesRestServer
+profiles-rest-service-port=18888
+
 shared-process-backend-services-bool=true
-shared-process-backend-services-mainclass=microgram.impl.rest.MicrogramRestServer
+shared-process-backend-services-mainclass=microgram.impl.srv.rest.combined.MicrogramRestServer
 shared-process-backend-services-port=18888
 
 uses-kafka-bool=true
 uses-external-mongo-bool=false
 
-posts-rest-service-mainclass=
-posts-rest-service-port=
+microgram-keystore=
+microgram-keystore-password=
+microgram-truststore=
+microgram-truststore-password=
 
-profiles-rest-service-mainclass=
-profiles-rest-service-port=
+posts-keystore=
+posts-keystore-password=
+posts-truststore=
+posts-truststore-password=
+
+profiles-keystore=
+profiles-keystore-password=
+profiles-truststore=
+profiles-truststore-password=
+
+mediastorage-truststore=
+mediastorage-truststore-password=
+mediastorage-keystore=
+mediastorage-keystore-password=
+
+tester-truststore=/home/sd/tester-ts.jks
+tester-truststore-password=tester-ts
