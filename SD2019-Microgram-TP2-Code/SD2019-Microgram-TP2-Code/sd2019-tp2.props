@@ -34,5 +34,5 @@ mediastorage-truststore-password=
 mediastorage-keystore=
 mediastorage-keystore-password=
 
-tester-truststore=/home/sd/tester-ts.jks
-tester-truststore-password=tester-ts
+tester-truststore=
+tester-truststore-password=
