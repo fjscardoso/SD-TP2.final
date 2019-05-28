@@ -1,10 +1,10 @@
-mediastorage-rest-service-mainclass=microgram.impl.srv.rest.media.MediaRestServer
+mediastorage-rest-service-mainclass=microgram.impl.rest.media.MediaRestServer
 mediastorage-rest-service-port=12222
 
-posts-rest-service-mainclass=microgram.impl.srv.rest.posts.PostsRestServer
+posts-rest-service-mainclass=microgram.impl.rest.posts.PostsRestServer
 posts-rest-service-port=17777
 
-profiles-rest-service-mainclass=microgram.impl.srv.rest.profiles.ProfilesRestServer
+profiles-rest-service-mainclass=microgram.impl.rest.profiles.ProfilesRestServer
 profiles-rest-service-port=18888
 
 shared-process-backend-services-bool=true
