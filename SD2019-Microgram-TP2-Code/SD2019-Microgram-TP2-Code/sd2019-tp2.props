@@ -8,7 +8,7 @@ profiles-rest-service-mainclass=microgram.impl.srv.rest.profiles.ProfilesRestSer
 profiles-rest-service-port=18888
 
 shared-process-backend-services-bool=true
-shared-process-backend-services-mainclass=microgram.impl.srv.rest.combined.MicrogramRestServer
+shared-process-backend-services-mainclass=
 shared-process-backend-services-port=18888
 
 uses-kafka-bool=true
