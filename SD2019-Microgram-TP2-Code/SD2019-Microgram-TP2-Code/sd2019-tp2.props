@@ -8,31 +8,31 @@ profiles-rest-service-mainclass=microgram.impl.rest.profiles.ProfilesRestServer
 profiles-rest-service-port=18888
 
 shared-process-backend-services-bool=true
-shared-process-backend-services-mainclass=
+shared-process-backend-services-mainclass=microgram.impl.rest.MicrogramRestServer
 shared-process-backend-services-port=18888
 
-uses-kafka-bool=true
+uses-kafka-bool=false
 uses-external-mongo-bool=false
 
-microgram-keystore=
-microgram-keystore-password=
-microgram-truststore=
-microgram-truststore-password=
+microgram-keystore=/home/sd/microgram.ks
+microgram-keystore-password=microgram
+microgram-truststore=/home/sd/microgram-truststore.ks
+microgram-truststore-password=microgram
 
-posts-keystore=
-posts-keystore-password=
-posts-truststore=
-posts-truststore-password=
+posts-keystore=/home/sd/microgram.ks
+posts-keystore-password=microgram
+posts-truststore=/home/sd/microgram-truststore.ks
+posts-truststore-password=microgram
 
-profiles-keystore=
-profiles-keystore-password=
-profiles-truststore=
-profiles-truststore-password=
+profiles-keystore=/home/sd/microgram.ks
+profiles-keystore-password=microgram
+profiles-truststore=/home/sd/microgram-truststore.ks
+profiles-truststore-password=microgram
 
-mediastorage-truststore=
-mediastorage-truststore-password=
-mediastorage-keystore=
-mediastorage-keystore-password=
+mediastorage-truststore=/home/sd/mediastorage-truststore.ks
+mediastorage-truststore-password=mediastorage
+mediastorage-keystore=/home/sd/mediastorage.ks
+mediastorage-keystore-password=mediastorage
 
-tester-truststore=
-tester-truststore-password=
+tester-truststore=/home/sd/tester-truststore.ks
+tester-truststore-password=microgram

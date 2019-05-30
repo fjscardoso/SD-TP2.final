@@ -1,5 +1,7 @@
 package microgram.api;
 
+import org.bson.codecs.pojo.annotations.BsonCreator;
+import org.bson.codecs.pojo.annotations.BsonProperty;
 import utils.JSON;
 
 /**
@@ -23,11 +25,14 @@ public class Profile {
 	int followers;
 	
 	public Profile() {}
-	
-	public Profile(String userId, String fullName, String photoUrl) {
+
+	@BsonCreator
+	public Profile(@BsonProperty("userId") String userId,@BsonProperty("fullName") String fullName,@BsonProperty("photoUrl") String photoUrl) {
 		this.userId = userId;
 		this.fullName = fullName;
 		this.photoUrl = photoUrl;
+		this.followers = 0;
+		this.following = 0;
 	}
 
 	public String getUserId() {

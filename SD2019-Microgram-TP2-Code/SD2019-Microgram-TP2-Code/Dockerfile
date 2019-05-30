@@ -11,3 +11,5 @@ COPY target/*.jar /home/sd/
 COPY sd2019-tp2.props /props/
 
 ENV CLASSPATH /home/sd/*
+
+COPY *.ks /home/sd/

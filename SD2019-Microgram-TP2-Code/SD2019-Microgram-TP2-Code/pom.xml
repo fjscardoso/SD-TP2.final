@@ -7,7 +7,7 @@
 	<version>1.0</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<authors>xxxxx-yyyyy</authors>
+		<authors>42997</authors>
 		<dockerfile-maven-version>1.4.10</dockerfile-maven-version>
 	</properties>
 	<build>
@@ -165,13 +165,11 @@
 				<artifactId>gson</artifactId>
 				<version>2.8.5</version>
 			</dependency>
-
 			<dependency>
 				<groupId>org.apache.kafka</groupId>
 				<artifactId>kafka-clients</artifactId>
 				<version>2.2.0</version>
 			</dependency>
-
 			<dependency>
 				<groupId>org.mongodb</groupId>
 				<artifactId>mongo-java-driver</artifactId>
