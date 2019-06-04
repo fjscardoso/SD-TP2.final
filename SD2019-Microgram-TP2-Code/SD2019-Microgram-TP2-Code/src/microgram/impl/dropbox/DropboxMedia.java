@@ -1,5 +1,6 @@
 package microgram.impl.dropbox;
 
+import microgram.api.java.Media;
 import microgram.impl.dropbox.msgs.*;
 
 import java.io.File;
@@ -29,9 +30,10 @@ import com.github.scribejava.core.oauth.OAuth20Service;
 import com.sun.net.httpserver.HttpServer;
 
 import microgram.api.java.Result;
+import utils.Hash;
 import utils.JSON;
 
-public class DropboxMedia {
+public class DropboxMedia implements Media{
 
     private static final String apiKey = "91zb24awf6gtwow";
     private static final String apiSecret = "oxc95t3bke4libw";
@@ -73,11 +75,11 @@ public class DropboxMedia {
         }
     }
 
-
     protected DropboxMedia(OAuth20Service service, OAuth2AccessToken accessToken) {
         this.service = service;
         this.accessToken = accessToken;
     }
+
 
     /**
      * Create a directory in dropbox.
@@ -160,18 +162,18 @@ public class DropboxMedia {
      * Write the contents of file name.
      * https://www.dropbox.com/developers/documentation/http/documentation#files-upload
      *
-     * @param path File name.
      * @param bytes Contents of the file.
      */
-    public Result<String> upload(String path, byte[] bytes) {
+    public Result<String> upload(byte[] bytes) {
         // TODO: TO BE COMPLETED
 
         //O que e deve fazer return como string
 
         try {
+
             OAuthRequest uploadFile = new OAuthRequest(Verb.POST, CREATE_FILE_V2_URL);
             uploadFile.addHeader("Content-Type", OCTETSTREAM_CONTENT_TYPE);
-            uploadFile.addHeader(DROPBOX_API_ARG, JSON.encode(new CreateFileV2Args(path)));
+            uploadFile.addHeader(DROPBOX_API_ARG, JSON.encode(new CreateFileV2Args("/mediastorage/" + Hash.of(bytes) + ".jpg")));
             uploadFile.setPayload(bytes);
 
             service.signRequest(accessToken, uploadFile);
@@ -186,13 +188,14 @@ public class DropboxMedia {
                 return Result.error(Result.ErrorCode.NOT_FOUND);
             } else if (r.getCode() == 200) {
                 System.err.println("File uploaded");
-                return Result.ok();
+                return Result.ok(Hash.of(bytes));
             } else {
                 System.err.println("Unexpected error HTTP: " + r.getCode());
                 return Result.error(Result.ErrorCode.INTERNAL_ERROR);
             }
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("rip");
             return Result.error(Result.ErrorCode.INTERNAL_ERROR);
         }
     }
@@ -202,15 +205,15 @@ public class DropboxMedia {
      * https://www.dropbox.com/developers/documentation/http/documentation#files-download
      * https://www.dropbox.com/developers/documentation/http/documentation#files-get_temporary_link
      *
-     * @param path File name.
+     * @param id name.
      * @return Returns the file contents.
      */
-    public Result<byte[]> download(String path) {
+    public Result<byte[]> download(String id) {
         // TODO: TO BE COMPLETED
         try {
             OAuthRequest downloadFile = new OAuthRequest(Verb.POST, DOWNLOAD_FILE_V2_URL);
             downloadFile.addHeader("Content-Type", OCTETSTREAM_CONTENT_TYPE);
-            downloadFile.addHeader(DROPBOX_API_ARG, JSON.encode(new AccessFileV2Args(path)));
+            downloadFile.addHeader(DROPBOX_API_ARG, JSON.encode(new AccessFileV2Args("/mediastorage/" + id + ".jpg")));
 
             service.signRequest(accessToken, downloadFile);
             Response r = service.execute(downloadFile);
@@ -239,15 +242,15 @@ public class DropboxMedia {
      * Deletes the file name.
      * https://www.dropbox.com/developers/documentation/http/documentation#files-delete
      *
-     * @param path File name.
+     * @param id File name.
      */
-    public Result<Void> delete(String path) {
+    public Result<Void> delete(String id) {
         // TODO: TO BE COMPLETED
         try {
             OAuthRequest deleteFolder = new OAuthRequest(Verb.POST, DELETE_FILE_V2_URL);
             deleteFolder.addHeader("Content-Type", JSON_CONTENT_TYPE);
 
-            deleteFolder.setPayload(JSON.encode(new DeleteFileV2Args(path)));
+            deleteFolder.setPayload(JSON.encode(new DeleteFileV2Args("/mediastorage/" + id + ".jpg")));
 
             service.signRequest(accessToken, deleteFolder);
             Response r = service.execute(deleteFolder);

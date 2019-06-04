@@ -41,11 +41,13 @@ public class MongoPosts implements Posts {
 
     public MongoPosts() {
 
-        MongoClient mongo = new MongoClient("0.0.0.0");
+        MongoClient mongo = new MongoClient("mongo1");
 
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
         dbName = mongo.getDatabase("Database").withCodecRegistry(pojoCodecRegistry);
+
+        dbName.drop();
 
         dbPosts = dbName.getCollection("dbPosts", Post.class);
 

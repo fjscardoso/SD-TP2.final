@@ -2,6 +2,7 @@ package microgram.impl.rest.media;
 
 import microgram.api.java.Media;
 import microgram.api.rest.RestMedia;
+import microgram.impl.dropbox.DropboxMedia;
 import microgram.impl.java.JavaMedia;
 import microgram.impl.rest.RestResource;
 
@@ -10,9 +11,11 @@ public class RestMediaResources extends RestResource implements RestMedia {
 	final Media impl;
 	final String baseUri;
 
-	public RestMediaResources(String baseUri) {
+	public RestMediaResources(String baseUri) throws Exception{
 		this.baseUri = baseUri;
+		//this.impl = DropboxMedia.createClientWithAccessToken();
 		this.impl = new JavaMedia();
+		//impl.upload(new byte[10]);
 	}
 
 	@Override

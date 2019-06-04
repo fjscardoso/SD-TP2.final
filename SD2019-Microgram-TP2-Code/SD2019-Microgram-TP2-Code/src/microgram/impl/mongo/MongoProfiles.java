@@ -39,7 +39,7 @@ public class MongoProfiles implements Profiles {
 
     public MongoProfiles() {
 
-        MongoClient mongo = new MongoClient("0.0.0.0");
+        MongoClient mongo = new MongoClient("mongo1");
 
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
@@ -65,6 +65,8 @@ public class MongoProfiles implements Profiles {
     @Override
     public Result<Profile> getProfile(String userId) {
         try {
+
+            //.first
             MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", userId)).iterator();
 
             if(!i.hasNext())
@@ -73,6 +75,7 @@ public class MongoProfiles implements Profiles {
             Profile p = i.next();
             p.setFollowers((int) dbFollowers.countDocuments(Filters.eq("userId", userId)));
             p.setFollowing((int) dbFollowers.countDocuments(Filters.eq("followerId", userId)));
+            p.setPosts((int) dbPosts.countDocuments(Filters.eq("ownerId", userId)));
 
             return Result.ok(p);
 
@@ -129,7 +132,8 @@ public class MongoProfiles implements Profiles {
     @Override
     public Result<List<Profile>> search(String prefix) {
         List<Profile> list = new LinkedList<Profile>();
-        MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", prefix)).iterator();
+
+        MongoCursor<Profile> i = dbProfiles.find(Filters.regex("userId", "^" + prefix)).iterator();
         while(i.hasNext())
             list.add(i.next());
 

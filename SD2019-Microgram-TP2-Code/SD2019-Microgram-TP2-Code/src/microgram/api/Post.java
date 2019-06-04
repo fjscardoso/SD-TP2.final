@@ -1,6 +1,7 @@
 package microgram.api;
 
 import org.bson.codecs.pojo.annotations.BsonCreator;
+import org.bson.codecs.pojo.annotations.BsonIgnore;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import utils.Hash;
 import utils.JSON;
@@ -21,7 +22,8 @@ public class Post {
 	String mediaUrl;
 	String location;
 	long timestamp;
-	
+
+	@BsonIgnore
 	int likes;
 
 	public Post() {}
@@ -33,7 +35,6 @@ public class Post {
 		this.mediaUrl = mediaUrl;
 		this.location = location;
 		this.timestamp = timestamp;
-		this.likes = 0;
 	}
 	
 	public String getMediaUrl() {
