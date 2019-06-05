@@ -16,23 +16,23 @@ uses-external-mongo-bool=false
 
 microgram-keystore=/home/sd/microgram.ks
 microgram-keystore-password=microgram
-microgram-truststore=/home/sd/microgram-truststore.ks
-microgram-truststore-password=microgram
+microgram-truststore=/home/sd/tester-truststore.ks
+microgram-truststore-password=changeit
 
-posts-keystore=/home/sd/microgram.ks
-posts-keystore-password=microgram
-posts-truststore=/home/sd/microgram-truststore.ks
-posts-truststore-password=microgram
+posts-keystore=
+posts-keystore-password=
+posts-truststore=
+posts-truststore-password=
 
-profiles-keystore=/home/sd/microgram.ks
-profiles-keystore-password=microgram
-profiles-truststore=/home/sd/microgram-truststore.ks
-profiles-truststore-password=microgram
+profiles-keystore=
+profiles-keystore-password=
+profiles-truststore=
+profiles-truststore-password=
 
-mediastorage-truststore=/home/sd/mediastorage-truststore.ks
-mediastorage-truststore-password=mediastorage
+mediastorage-truststore=/home/sd/tester-truststore.ks
+mediastorage-truststore-password=changeit
 mediastorage-keystore=/home/sd/mediastorage.ks
 mediastorage-keystore-password=mediastorage
 
 tester-truststore=/home/sd/tester-truststore.ks
-tester-truststore-password=microgram
+tester-truststore-password=changeit

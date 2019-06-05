@@ -2,7 +2,7 @@ package microgram.impl.rest.profiles.replicated;
 
 import static microgram.api.java.Result.error;
 import static microgram.api.java.Result.ErrorCode.NOT_IMPLEMENTED;
-import static microgram.impl.rest.replication.MicrogramOperation.Operation.GetProfile;
+import static microgram.impl.rest.replication.MicrogramOperation.Operation.*;
 
 import microgram.api.Profile;
 import microgram.api.java.Profiles;
@@ -11,7 +11,9 @@ import microgram.impl.rest.replication.MicrogramOperation;
 import microgram.impl.rest.replication.MicrogramOperationExecutor;
 import microgram.impl.rest.replication.OrderedExecutor;
 
-public abstract class _TODO_ProfilesReplicator implements MicrogramOperationExecutor, Profiles {
+import java.util.List;
+
+public class _TODO_ProfilesReplicator implements MicrogramOperationExecutor, Profiles {
 
 	private static final int FOLLOWER = 0, FOLLOWEE = 1;
 	
@@ -33,6 +35,16 @@ public abstract class _TODO_ProfilesReplicator implements MicrogramOperationExec
 				String[] users = op.args(String[].class);
 				return localReplicaDB.isFollowing( users[FOLLOWER], users[FOLLOWEE]);
 			}
+			case GetProfile: {
+				return localReplicaDB.getProfile(op.arg(String.class));
+			}
+			case DeleteProfile: {
+				return localReplicaDB.deleteProfile(op.arg(String.class));
+			}
+			case SearchProfile: {
+				return localReplicaDB.search(op.arg(String.class));
+
+			}
 			default:
 				return error(NOT_IMPLEMENTED);
 		}	
@@ -41,5 +53,40 @@ public abstract class _TODO_ProfilesReplicator implements MicrogramOperationExec
 	@Override
 	public Result<Profile> getProfile(String userId) {
 		return executor.replicate( new MicrogramOperation(GetProfile, userId));
+	}
+
+	@Override
+	public Result<Void> createProfile(Profile profile) {
+		return executor.replicate( new MicrogramOperation(CreateProfile, profile));
+	}
+
+	@Override
+	public Result<Void> deleteProfile(String userId) {
+		return executor.replicate( new MicrogramOperation(DeleteProfile, userId));
+	}
+
+	@Override
+	public Result<List<Profile>> search(String prefix) {
+		return executor.replicate( new MicrogramOperation(SearchProfile, prefix));
+	}
+
+	@Override
+	public Result<Void> follow(String userId1, String userId2, boolean isFollowing) {
+		String[] x = new String[2];
+		x[0] = userId1;
+		x[1] = userId2;
+		if(isFollowing)
+			return executor.replicate( new MicrogramOperation(FollowProfile, x));
+		else
+			return executor.replicate( new MicrogramOperation(UnFollowProfile, x));
+	}
+
+	@Override
+	public Result<Boolean> isFollowing(String userId1, String userId2) {
+		String[] x = new String[2];
+		x[0] = userId1;
+		x[1] = userId2;
+		return executor.replicate( new MicrogramOperation(IsFollowing, x));
+
 	}
 }

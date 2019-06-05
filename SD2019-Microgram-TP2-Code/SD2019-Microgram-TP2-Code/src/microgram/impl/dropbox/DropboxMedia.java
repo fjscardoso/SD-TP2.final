@@ -3,7 +3,9 @@ package microgram.impl.dropbox;
 import microgram.api.java.Media;
 import microgram.impl.dropbox.msgs.*;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.InputStream;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -218,6 +220,16 @@ public class DropboxMedia implements Media{
             service.signRequest(accessToken, downloadFile);
             Response r = service.execute(downloadFile);
 
+            InputStream is = r.getStream();
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+
+            int nRead;
+            byte[] data = new byte[16384];
+
+            while ((nRead = is.read(data, 0, data.length)) != -1) {
+                buffer.write(data, 0, nRead);
+            }
+
             System.err.println("BODY : " + r.getBody());
             System.err.println("CODE : " + r.getCode());
             System.err.println("MESSAGE : " + r.getMessage());
@@ -226,8 +238,10 @@ public class DropboxMedia implements Media{
                 System.err.println("File does not exist");
                 return Result.error(Result.ErrorCode.NOT_FOUND);
             } else if (r.getCode() == 200) {
-                System.err.println("File download");
-                return Result.ok(r.getBody().getBytes());
+                System.err.println("File downloaded");
+
+                return Result.ok(buffer.toByteArray());
+
             } else {
                 System.err.println("Unexpected error HTTP: " + r.getCode());
                 return Result.error(Result.ErrorCode.INTERNAL_ERROR);
