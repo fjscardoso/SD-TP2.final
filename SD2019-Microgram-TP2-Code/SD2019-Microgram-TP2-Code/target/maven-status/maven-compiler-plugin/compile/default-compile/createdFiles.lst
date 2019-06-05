@@ -2,6 +2,7 @@ discovery/Discovery.class
 microgram/impl/rest/replication/kafka/KafkaUtils.class
 microgram/api/java/Profiles.class
 microgram/impl/dropbox/msgs/CreateFolderV2Args.class
+microgram/impl/rest/profiles/replicated/ProfilesReplicator$1.class
 utils/Args.class
 microgram/impl/rest/replication/ClientVersionAppender.class
 microgram/impl/rest/replication/MicrogramTopic.class
@@ -18,6 +19,7 @@ microgram/impl/rest/replication/TotalOrderExecutor.class
 microgram/impl/java/JavaMedia.class
 microgram/impl/rest/RestResource$1.class
 microgram/api/Profile.class
+microgram/impl/rest/profiles/replicated/ProfilesReplicator.class
 utils/Random.class
 microgram/impl/dropbox/DropboxMedia.class
 utils/Threading$NoisyRunnable.class
@@ -27,7 +29,6 @@ microgram/impl/rest/replication/kafka/KafkaOrder.class
 microgram/api/java/OkResult.class
 microgram/api/Followers.class
 microgram/impl/rest/replication/kafka/Subscriber.class
-microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator$1.class
 microgram/api/rest/RestPosts.class
 utils/Log.class
 utils/Sleep.class
@@ -37,13 +38,13 @@ microgram/impl/rest/replication/kafka/Subscriber$Listener.class
 utils/JSON.class
 microgram/impl/rest/replication/MicrogramOperation$Operation.class
 microgram/api/UserLikes.class
+microgram/impl/rest/posts/replicated/PostsReplicator.class
 utils/IO.class
 microgram/impl/mongo/MongoPosts.class
 microgram/impl/rest/replication/kafka/Zookeeper.class
 utils/Url.class
 utils/Props.class
 microgram/api/java/Result.class
-microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.class
 utils/Queues.class
 microgram/api/java/ErrorResult.class
 microgram/impl/rest/posts/RestPostsResources.class
@@ -63,7 +64,6 @@ microgram/impl/rest/utils/PrematchingRequestFilter.class
 microgram/impl/rest/MicrogramRestServer.class
 microgram/api/java/Result$ErrorCode.class
 microgram/api/Post.class
-microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.class
 utils/Threading$1.class
 microgram/impl/rest/media/RestMediaResources.class
 microgram/impl/dropbox/msgs/DeleteFileV2Args.class
@@ -74,3 +74,4 @@ microgram/api/rest/RestProfiles.class
 microgram/impl/dropbox/msgs/ListFolderV2Return$FolderEntry.class
 utils/Log$SimplerFormatter.class
 microgram/impl/dropbox/msgs/AccessFileV2Args.class
+microgram/impl/rest/posts/replicated/PostsReplicator$1.class

@@ -39,7 +39,7 @@ public class MongoProfiles implements Profiles {
 
     public MongoProfiles() {
 
-        MongoClient mongo = new MongoClient("mongo1");
+        MongoClient mongo = new MongoClient("0.0.0.0");
 
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
@@ -66,13 +66,11 @@ public class MongoProfiles implements Profiles {
     public Result<Profile> getProfile(String userId) {
         try {
 
-            //.first
-            MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", userId)).iterator();
+            Profile p = dbProfiles.find(Filters.eq("userId", userId)).first();
 
-            if(!i.hasNext())
+            if(p == null)
                 return error(Result.ErrorCode.NOT_FOUND);
 
-            Profile p = i.next();
             p.setFollowers((int) dbFollowers.countDocuments(Filters.eq("userId", userId)));
             p.setFollowing((int) dbFollowers.countDocuments(Filters.eq("followerId", userId)));
             p.setPosts((int) dbPosts.countDocuments(Filters.eq("ownerId", userId)));
@@ -88,9 +86,9 @@ public class MongoProfiles implements Profiles {
     public Result<Void> createProfile(Profile profile) {
         try {
 
-            MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", profile.getUserId())).iterator();
+            Profile p = dbProfiles.find(Filters.eq("userId", profile.getUserId())).first();
 
-            if(i.hasNext())
+            if(p != null)
                 return error(CONFLICT);
 
             dbProfiles.insertOne(profile);
@@ -105,9 +103,10 @@ public class MongoProfiles implements Profiles {
     @Override
     public Result<Void> deleteProfile(String userId) {
         try {
-            MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", userId)).iterator();
 
-            if(!i.hasNext())
+            Profile p = dbProfiles.find(Filters.eq("userId", userId)).first();
+
+            if(p == null)
                 return error(Result.ErrorCode.NOT_FOUND);
 
             dbProfiles.deleteOne(Filters.eq("userId", userId));
@@ -144,10 +143,10 @@ public class MongoProfiles implements Profiles {
     @Override
     public Result<Void> follow(String userId1, String userId2, boolean isFollowing) {
 
-        MongoCursor<Profile> i = dbProfiles.find(Filters.eq("userId", userId1)).iterator();
-        MongoCursor<Profile> it = dbProfiles.find(Filters.eq("userId", userId2)).iterator();
+        Profile p1 = dbProfiles.find(Filters.eq("userId", userId1)).first();
+        Profile p2 = dbProfiles.find(Filters.eq("userId", userId2)).first();
 
-        if(!i.hasNext() || !it.hasNext())
+        if(p1 == null || p2 == null)
             return error(Result.ErrorCode.NOT_FOUND);
 
         if(isFollowing){
@@ -169,8 +168,8 @@ public class MongoProfiles implements Profiles {
     @Override
     public Result<Boolean> isFollowing(String userId1, String userId2) {
 
-        MongoCursor<Followers> follow = dbFollowers.find(Filters.and(Filters.eq("followerId", userId1), Filters.eq("userId", userId2))).iterator();
+        Followers follower = dbFollowers.find(Filters.and(Filters.eq("followerId", userId1), Filters.eq("userId", userId2))).first();
 
-        return Result.ok(follow.hasNext());
+        return Result.ok(follower != null);
     }
 }

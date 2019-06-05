@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f24467-38e3-4a36-90d7-542eda2effae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/PostsReplicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sd2019-tp2.props" beforeDir="false" afterPath="$PROJECT_DIR$/sd2019-tp2.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/microgram/impl/dropbox/DropboxMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/dropbox/DropboxMedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/media/RestMediaResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/rest/media/RestMediaResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/dropbox/DropboxMedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/dropbox/DropboxMedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/media/RestMediaResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/rest/media/RestMediaResources.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ProfilesReplicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/mongo/MongoPosts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/mongo/MongoPosts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/mongo/MongoProfiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/mongo/MongoProfiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/docker/image-id" beforeDir="false" afterPath="$PROJECT_DIR$/target/docker/image-id" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sd19-tp2-smd-1.0-docker-info.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sd19-tp2-smd-1.0-docker-info.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sd19-tp2-smd-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sd19-tp2-smd-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/docker/sd2019/sd19-tp2-smd/image-id" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/docker/sd2019/sd19-tp2-smd/image-id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tester-truststore.ks" beforeDir="false" afterPath="$PROJECT_DIR$/tester-truststore.ks" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,10 +54,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ProfilesReplicator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+            <state relative-caret-position="263">
+              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,14 +65,62 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/PostsReplicator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-396">
+              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sd2019-tp2.props">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/MicrogramRestServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -92,6 +148,8 @@
       <find>hash</find>
       <find>media</find>
       <find>upload</find>
+      <find>iterator</find>
+      <find>implemented</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,9 +161,6 @@
         <option value="$PROJECT_DIR$/src/microgram/impl/mongo/_TODO_MongoPosts.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/microgram/impl/rest/MicrogramRestServer.java" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.java" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java" />
         <option value="$PROJECT_DIR$/src/microgram/api/UserLikes.java" />
         <option value="$PROJECT_DIR$/src/microgram/api/Followers.java" />
         <option value="$PROJECT_DIR$/src/microgram/impl/dropbox/msgs/AccessFileV2Args.java" />
@@ -122,12 +177,16 @@
         <option value="$PROJECT_DIR$/src/microgram/api/Profile.java" />
         <option value="$PROJECT_DIR$/src/microgram/api/Post.java" />
         <option value="$PROJECT_DIR$/src/microgram/impl/rest/media/MediaRestServer.java" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java" />
         <option value="$PROJECT_DIR$/src/microgram/impl/rest/media/RestMediaResources.java" />
-        <option value="$PROJECT_DIR$/sd2019-tp2.props" />
-        <option value="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java" />
         <option value="$PROJECT_DIR$/src/microgram/impl/dropbox/DropboxMedia.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ProfilesReplicator.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java" />
+        <option value="$PROJECT_DIR$/sd2019-tp2.props" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java" />
+        <option value="$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java" />
       </list>
     </option>
   </component>
@@ -358,7 +417,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.7479862" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -434,12 +493,12 @@
       <workItem from="1559579511568" duration="4092000" />
       <workItem from="1559681553941" duration="6716000" />
       <workItem from="1559694971150" duration="1176000" />
-      <workItem from="1559747396395" duration="2843000" />
+      <workItem from="1559747396395" duration="7590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38264000" />
+    <option name="totallyTimeSpent" value="43011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -482,27 +541,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/java/JavaProfiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="150" column="24" lean-forward="true" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/api/rest/RestPosts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.10.1/mongo-java-driver-3.10.1.jar!/com/mongodb/client/MongoCursor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -514,13 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/api/java/Profiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -668,28 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/MicrogramRestServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2332">
           <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/replication/MicrogramOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,13 +720,6 @@
     <entry file="file://$PROJECT_DIR$/testn-sd2.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/microgram/impl/java/JavaMedia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -725,70 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/_TODO_PostsReplicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/RestPostsResources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sd2019-tp2.props">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/replication/OrderedExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" selection-start-line="33" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/_TODO_ProfilesReplicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/RestResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.25.1/jersey-server-2.25.1-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -907,20 +846,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.10.1/mongo-java-driver-3.10.1.jar!/com/mongodb/client/MongoIterable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/api/rest/RestProfiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/RestResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/api/java/Profiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/replication/MicrogramOperationExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/replication/MicrogramOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ReplicatedProfilesResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/replication/OrderedExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/profiles/replicated/ProfilesReplicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java">
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/MicrogramRestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/ReplicatedPostsResources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/rest/posts/replicated/PostsReplicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sd2019-tp2.props">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoProfiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microgram/impl/mongo/MongoPosts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -981,7 +1018,8 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.19246861" />
+                <option value="0.7479862" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

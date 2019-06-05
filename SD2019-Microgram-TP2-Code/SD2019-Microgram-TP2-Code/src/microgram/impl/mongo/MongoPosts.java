@@ -41,7 +41,7 @@ public class MongoPosts implements Posts {
 
     public MongoPosts() {
 
-        MongoClient mongo = new MongoClient("mongo1");
+        MongoClient mongo = new MongoClient("0.0.0.0");
 
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
@@ -63,12 +63,11 @@ public class MongoPosts implements Posts {
     @Override
     public Result<Post> getPost(String postId) {
         try {
-            MongoCursor<Post> i = dbPosts.find(Filters.eq("postId", postId)).iterator();
+            Post p = dbPosts.find(Filters.eq("postId", postId)).first();
 
-            if(!i.hasNext())
+            if(p == null)
                 return error(Result.ErrorCode.NOT_FOUND);
 
-            Post p = i.next();
             p.setLikes((int) dbLikes.countDocuments(Filters.eq("postId", postId)));
             return Result.ok(p);
 
@@ -81,9 +80,9 @@ public class MongoPosts implements Posts {
     @Override
     public Result<Void> deletePost(String postId) {
         try {
-            MongoCursor<Post> i = dbPosts.find(Filters.eq("postId", postId)).iterator();
+            Post p = dbPosts.find(Filters.eq("postId", postId)).first();
 
-            if(!i.hasNext())
+            if(p == null)
                 return error(Result.ErrorCode.NOT_FOUND);
 
             dbPosts.deleteOne(Filters.eq("postId", postId));
@@ -108,9 +107,9 @@ public class MongoPosts implements Posts {
 
             String postId = Hash.of(p.getOwnerId(), p.getMediaUrl());
 
-            MongoCursor<Post> i = dbPosts.find(Filters.eq("postId", postId)).iterator();
+            Post i = dbPosts.find(Filters.eq("postId", postId)).first();
 
-            if(i.hasNext())
+            if(i != null)
                 return error(CONFLICT);
 
             //Post pojo = new Post(postId, p.getOwnerId(), p.getMediaUrl(), p.getLocation(),0,0);
@@ -127,9 +126,9 @@ public class MongoPosts implements Posts {
     public Result<Void> like(String postId, String userId, boolean isLiked) {
 
         try {
-            MongoCursor<Post> it = dbPosts.find(Filters.eq("postId", postId)).iterator();
+            Post p = dbPosts.find(Filters.eq("postId", postId)).first();
 
-            if (!it.hasNext())
+            if (p == null)
                 return error(Result.ErrorCode.NOT_FOUND);
 
             if (isLiked) {
@@ -157,8 +156,8 @@ public class MongoPosts implements Posts {
 
     @Override
     public Result<Boolean> isLiked(String postId, String userId) {
-        MongoCursor<UserLikes> i = dbLikes.find(Filters.and(Filters.eq("userId", userId), Filters.eq("postId", postId))).iterator();
-        return Result.ok(i.hasNext());
+        UserLikes i = dbLikes.find(Filters.and(Filters.eq("userId", userId), Filters.eq("postId", postId))).first();
+        return Result.ok(i != null);
     }
 
     @Override

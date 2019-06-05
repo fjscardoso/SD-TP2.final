@@ -13,14 +13,14 @@ import microgram.impl.rest.replication.OrderedExecutor;
 
 import java.util.List;
 
-public class _TODO_ProfilesReplicator implements MicrogramOperationExecutor, Profiles {
+public class ProfilesReplicator implements MicrogramOperationExecutor, Profiles {
 
 	private static final int FOLLOWER = 0, FOLLOWEE = 1;
 	
 	final Profiles localReplicaDB;
 	final OrderedExecutor executor;
 	
-	_TODO_ProfilesReplicator( Profiles localDB, OrderedExecutor executor) {
+	ProfilesReplicator(Profiles localDB, OrderedExecutor executor) {
 		this.localReplicaDB = localDB;
 		this.executor = executor.init(this);
 	}
@@ -44,6 +44,14 @@ public class _TODO_ProfilesReplicator implements MicrogramOperationExecutor, Pro
 			case SearchProfile: {
 				return localReplicaDB.search(op.arg(String.class));
 
+			}
+			case FollowProfile: {
+				String[] users = op.args(String[].class);
+				return localReplicaDB.follow(users[FOLLOWER], users[FOLLOWEE], true);
+			}
+			case UnFollowProfile: {
+				String[] users = op.args(String[].class);
+				return localReplicaDB.follow(users[FOLLOWER], users[FOLLOWEE], false);
 			}
 			default:
 				return error(NOT_IMPLEMENTED);

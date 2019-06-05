@@ -5,46 +5,47 @@ import java.util.List;
 import microgram.api.Profile;
 import microgram.api.java.Profiles;
 import microgram.api.rest.RestProfiles;
-import microgram.impl.java.JavaProfiles;
 import microgram.impl.mongo.MongoProfiles;
 import microgram.impl.rest.RestResource;
+import microgram.impl.rest.replication.MicrogramTopic;
+import microgram.impl.rest.replication.TotalOrderExecutor;
 
 public class ReplicatedProfilesResources extends RestResource implements RestProfiles {
 	final Profiles localDB;
-	final _TODO_ProfilesReplicator replicator;
+	final ProfilesReplicator replicator;
 	
 	public ReplicatedProfilesResources() {
 		this.localDB = new MongoProfiles() ;
-		this.replicator = null; //new _TODO_ProfilesReplicator(localDB, new TotalOrderExecutor(MicrogramTopic.MicrogramEvents));
+		this.replicator = new ProfilesReplicator(localDB, new TotalOrderExecutor(MicrogramTopic.MicrogramEvents));
 	}
 
 	@Override
 	public Profile getProfile(String userId) {
-		return super.resultOrThrow( localDB.getProfile( userId ));
+		return super.resultOrThrow( replicator.getProfile( userId ));
 	}
 
 	@Override
 	public void createProfile(Profile profile) {
-		super.resultOrThrow( localDB.createProfile(profile));
+		super.resultOrThrow( replicator.createProfile(profile));
 	}
 
 	@Override
 	public void follow(String userId1, String userId2, boolean isFollowing) {
-		super.resultOrThrow( localDB.follow(userId1, userId2, isFollowing));
+		super.resultOrThrow( replicator.follow(userId1, userId2, isFollowing));
 	}
 
 	@Override
 	public boolean isFollowing(String userId1, String userId2) {
-		return super.resultOrThrow( localDB.isFollowing(userId1, userId2));
+		return super.resultOrThrow( replicator.isFollowing(userId1, userId2));
 	}
 
 	@Override
 	public void deleteProfile(String userId) {
-		super.resultOrThrow( localDB.deleteProfile(userId));
+		super.resultOrThrow( replicator.deleteProfile(userId));
 	}
 
 	@Override
 	public List<Profile> search(String prefix) {
-		return super.resultOrThrow( localDB.search(prefix));
+		return super.resultOrThrow( replicator.search(prefix));
 	}
 }
