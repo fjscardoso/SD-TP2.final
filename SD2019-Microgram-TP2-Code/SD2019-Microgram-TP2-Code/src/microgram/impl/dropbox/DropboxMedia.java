@@ -37,8 +37,8 @@ import utils.JSON;
 
 public class DropboxMedia implements Media{
 
-    private static final String apiKey = "91zb24awf6gtwow";
-    private static final String apiSecret = "oxc95t3bke4libw";
+    private static final String apiKey = "empty";
+    private static final String apiSecret = "empty";
     private static final String accessTokenStr = "LwCMEv-XqcAAAAAAAAAANJerq57vnIy6LYWF-bDSwW6IHK6QCpWZnfMsv3KSKI3g";
 
     protected static final String JSON_CONTENT_TYPE = "application/json; charset=utf-8";
